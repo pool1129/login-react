@@ -1,0 +1,8 @@
+{
+  "name": "login-react",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/pool1129/login-react.git",
+  "author": "wwl-jky <jky@winwinlab.co.kr>",
+  "license": "MIT"
+}
