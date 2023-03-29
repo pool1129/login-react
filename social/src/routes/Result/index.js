@@ -6,8 +6,8 @@ import { REST_API_KEY , REDIRECT_URI } from "../../data/keyData";
 const Result = () => {
     const location = useLocation();
     const navigate = useNavigate();
-    const KAKAO_CODE = location.search.split('=')[1];
 
+    const KAKAO_CODE = location.search.split('=')[1];
     const getKakaoToken = () => {
         if (!localStorage.getItem('kakao_token')) {
             fetch(`https://kauth.kakao.com/oauth/token` , {
@@ -21,13 +21,13 @@ const Result = () => {
                 .then(data => {
                     if (data.access_token) {
                         localStorage.setItem('kakao_token', data.access_token);
-                        navigate('/kakao')
+                        navigate('/')
                     }
                 });
         } else {
-            navigate('/kakao')
+            navigate('/')
         }
-    };
+    }; 
 
     useEffect(() => {
         if (!location.search) return;
@@ -36,7 +36,7 @@ const Result = () => {
     } , []);
 
     return (
-        <div>KAKAO LOGIN</div>
+        <div>LOGIN 성공!</div>
     )
 }
 

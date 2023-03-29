@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-import Kakao from './routes/Kakao';
+import Login from './routes/Login';
 import Result from './routes/Result';
 
 import './App.css';
@@ -10,7 +10,7 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path='/kakao' element={<Kakao/>}/>
+          <Route path='/' element={<Login/>}/>
           <Route path='/result' element={<Result/>}/>
         </Routes>
       </BrowserRouter>
